@@ -4,6 +4,8 @@ require 'nokogiri'
 require 'open-uri'
 require 'dotenv'
 
+require_relative 'errors/wrong_city_error'
+
 Dotenv.load
 
 # Fetch information from eltiempo API
@@ -22,6 +24,7 @@ module EltiempoApi
     xml.xpath('//location//data//name').each_with_index do |name, index|
       url += xml.xpath('//location//data//url')[index].content if name.content.downcase == city_name&.downcase
     end
+    raise WrongCityError if url == ''
 
     url
   end
