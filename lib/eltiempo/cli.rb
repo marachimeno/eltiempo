@@ -2,16 +2,25 @@
 
 require_relative '../eltiempo'
 
+require_relative 'errors/no_city_error'
+
 module Eltiempo
   # CLI controller
   class CLI
     def call
+      help_menu if ARGV.count.zero?
       case ARGV[0]
       when '-today'
+        raise NoCityError if ARGV[1].nil?
+
         Eltiempo.today(ARGV[1])
       when '-av_min'
+        raise NoCityError if ARGV[1].nil?
+
         Eltiempo.av_min(ARGV[1])
       when '-av_max'
+        raise NoCityError if ARGV[1].nil?
+
         Eltiempo.av_max(ARGV[1])
       when '-h'
         help_menu
