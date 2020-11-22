@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe Eltiempo do
-  it 'has a version number' do
-    expect(Eltiempo::VERSION).not_to be nil
-  end
-
   describe '#today' do
     context 'given a city name' do
       let(:city_name) { 'Barcelona' }
