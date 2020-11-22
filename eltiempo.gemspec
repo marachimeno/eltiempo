@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/eltiempo/version'
 
 Gem::Specification.new do |spec|
@@ -6,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Mara Chimeno']
   spec.email         = ['marachimeno@gmail.com']
 
-  spec.summary       = %q{Gem to get weather from Barcelona\'s cities}
-  spec.description   = %q{CLI in ruby to know the weather of the cities of Barcelona using the eltiempo.com api}
+  spec.summary       = %q(Gem to get weather from Barcelona\'s cities)
+  spec.description   = 'CLI in ruby to know the weather of the cities of Barcelona using the eltiempo.com api'
   spec.homepage      = 'https://github.com/marachimeno/eltiempo'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
@@ -20,7 +22,7 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
+  spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
   spec.bindir        = 'exe'
