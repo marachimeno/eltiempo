@@ -44,5 +44,17 @@ module Eltiempo
     def max_today(city_name)
       EltiempoApi.week_maxs(city_name).first
     end
+
+    def help_menu
+      puts <<-DOC
+      Welcome to eltiempo!
+      Usage: eltiempo [option]
+        -today city          get today's weather for a city
+        -av_max city         get the average maximum temperature for the week in a city
+        -av_min city         get the average minimum temperature for the week in a city
+
+        NOTE: the city name can go without quotation marks
+      DOC
+    end
   end
 end

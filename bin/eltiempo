@@ -6,7 +6,8 @@ require './lib/eltiempo/errors/no_city_error'
 
 eltiempo = Eltiempo::CLI.new
 
-help_menu if ARGV.count.zero?
+eltiempo.help_menu if ARGV.count.zero?
+
 case ARGV[0]
 when '-today'
   raise NoCityError if ARGV[1].nil?
@@ -21,25 +22,5 @@ when '-av_max'
 
   eltiempo.av_max(ARGV[1])
 when '-h'
-  puts <<-DOC
-  Welcome to eltiempo!
-  Usage: eltiempo [option]
-    -today city          get today's weather for a city
-    -av_max city         get the average maximum temperature for the week in a city
-    -av_min city         get the average minimum temperature for the week in a city
-
-    NOTE: the city name can go without quotation marks
-  DOC
-end
-
-def help_menu
-  puts <<-DOC
-  Welcome to eltiempo!
-  Usage: eltiempo [option]
-    -today city          get today's weather for a city
-    -av_max city         get the average maximum temperature for the week in a city
-    -av_min city         get the average minimum temperature for the week in a city
-
-    NOTE: the city name can go without quotation marks
-  DOC
+  eltiempo.help_menu
 end
