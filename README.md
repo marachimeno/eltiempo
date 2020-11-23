@@ -6,7 +6,7 @@ today's temperature in a city (the maximum and minimum).
 
 
 ## Usage
-Download or clone this repo into you computer and navigate to the root directory `/eltiempo`.
+Download or clone this repo into you computer and navigate to the root directory `eltiempo`.
 From there you can run the following commands:
 ```
 eltiempo OPTIONS   NAME OF CITY
