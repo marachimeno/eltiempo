@@ -2,5 +2,25 @@
 # frozen_string_literal: true
 
 require './lib/eltiempo'
+require './lib/eltiempo/errors/no_city_error'
 
-Eltiempo::CLI.new.call
+eltiempo = Eltiempo::CLI.new
+
+eltiempo.help_menu if ARGV.count.zero?
+
+case ARGV[0]
+when '-today'
+  raise NoCityError if ARGV[1].nil?
+
+  eltiempo.today(ARGV[1])
+when '-av_min'
+  raise NoCityError if ARGV[1].nil?
+
+  eltiempo.av_min(ARGV[1])
+when '-av_max'
+  raise NoCityError if ARGV[1].nil?
+
+  eltiempo.av_max(ARGV[1])
+when '-h'
+  eltiempo.help_menu
+end
