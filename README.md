@@ -8,7 +8,7 @@ today's temperature in a city (the maximum and minimum).
 ## Usage
 Download or clone this repo into you computer and navigate to the root directory `/eltiempo`.
 From there you can run the following commands:
-
+```
 eltiempo OPTIONS   NAME OF CITY
 
 eltiempo -h                            #get help menu to see all option
@@ -17,6 +17,7 @@ eltiempo -av_max   Barcelona           #get the average maximum temperature for 
 eltiempo -av_min   Barcelona           #get the average minimum temperature for the week in a city
 
 NOTE: the city name can go without quotation marks
+```
 
 ## Build status
 Build status from **Travis** (Continus Integration)
