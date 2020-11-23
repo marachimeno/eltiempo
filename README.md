@@ -1,40 +1,46 @@
 # Eltiempo
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/eltiempo`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to your new CLI! In this CLI you can check the weather of all cities withing Barcelona's region. You can check
+the average minimum temperature for the week in a city, the average maximum temperature for the week in a city and
+today's temperature in a city (the maximum and minimum).
 
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'eltiempo'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install eltiempo
 
 ## Usage
+Download or clone this repo into you computer and navigate to the root directory `/eltiempo`.
+From there you can run the following commands:
 
-TODO: Write usage instructions here
+eltiempo OPTIONS   NAME OF CITY
 
-## Development
+eltiempo -h                            #get help menu to see all option
+eltiempo -today    Barcelona           #get today's weather for a city
+eltiempo -av_max   Barcelona           #get the average maximum temperature for the week in a city
+eltiempo -av_min   Barcelona           #get the average minimum temperature for the week in a city
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+NOTE: the city name can go without quotation marks
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Build status
+Build status from **Travis** (Continus Integration)
+[![Build Status](https://travis-ci.com/marachimeno/eltiempo.svg?branch=master)](https://travis-ci.org/marachimeno/eltiempo)
 
-## Contributing
+## Tech/Framework
+This API was built using:
+- **[Ruby 2.6.6]**(https://www.ruby-lang.org/en/)
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/eltiempo.
+## Tests
+Used **[rspec-rails]**(https://github.com/rspec/rspec-rails) for testing.
+In order to run the test just type the following command in the terminal:
+```
+rspec
+```
 
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+## Code style
+Currently using **[Rubocop]**(https://github.com/rubocop-hq/rubocop/blob/master/README.md) for code formatting and code analysis (linter).
+In order to use it:
+- run the following command to see in which files there are style offenses:
+```
+rubocop
+```
+- run the following command to autocorrect style offenses:
+```
+rubocop -A
+```
