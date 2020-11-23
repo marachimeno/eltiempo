@@ -23,7 +23,7 @@ Build status from **Travis** (Continus Integration)
 [![Build Status](https://travis-ci.com/marachimeno/eltiempo.svg?branch=master)](https://travis-ci.org/marachimeno/eltiempo)
 
 ## Tech/Framework
-This API was built using:
+This CLI was built using:
 - **[Ruby 2.6.6](https://www.ruby-lang.org/en/)**
 
 ## Tests
