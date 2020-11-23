@@ -10,7 +10,6 @@ Download or clone this repo into you computer and navigate to the root directory
 From there you can run the following commands:
 ```
 eltiempo OPTIONS   NAME OF CITY
-
 eltiempo -h                            #get help menu to see all option
 eltiempo -today    Barcelona           #get today's weather for a city
 eltiempo -av_max   Barcelona           #get the average maximum temperature for the week in a city
