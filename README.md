@@ -24,17 +24,17 @@ Build status from **Travis** (Continus Integration)
 
 ## Tech/Framework
 This API was built using:
-- **[Ruby 2.6.6]**(https://www.ruby-lang.org/en/)
+- **[Ruby 2.6.6](https://www.ruby-lang.org/en/)**
 
 ## Tests
-Used **[rspec-rails]**(https://github.com/rspec/rspec-rails) for testing.
+Used **[rspec-rails](https://github.com/rspec/rspec-rails)** for testing.
 In order to run the test just type the following command in the terminal:
 ```
 rspec
 ```
 
 ## Code style
-Currently using **[Rubocop]**(https://github.com/rubocop-hq/rubocop/blob/master/README.md) for code formatting and code analysis (linter).
+Currently using **[Rubocop](https://github.com/rubocop-hq/rubocop/blob/master/README.md)** for code formatting and code analysis (linter).
 In order to use it:
 - run the following command to see in which files there are style offenses:
 ```
