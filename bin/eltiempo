@@ -3,10 +3,9 @@
 
 require './lib/eltiempo'
 require './lib/eltiempo/errors/no_city_error'
+require './lib/eltiempo/errors/wrong_option_error'
 
 eltiempo = Eltiempo::CLI.new
-
-eltiempo.help_menu if ARGV.count.zero?
 
 case ARGV[0]
 when '-today'
@@ -23,4 +22,6 @@ when '-av_max'
   eltiempo.av_max(ARGV[1])
 when '-h'
   eltiempo.help_menu
+else
+  raise WrongOptionError
 end
