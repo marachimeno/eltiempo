@@ -17,6 +17,7 @@ eltiempo -av_min   Barcelona           #get the average minimum temperature for 
 
 NOTE: the city name can go without quotation marks
 ```
+You will need to add your affiliate id for Eltiempo API to work.
 
 ## Build status
 Build status from **Travis** (Continus Integration)
